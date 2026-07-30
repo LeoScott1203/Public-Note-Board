@@ -6,6 +6,7 @@ export default function NoteCard({ note, fetchNotes }) {
     const [noteTitle, setNoteTitle] = useState(note.noteTitle);
     const [noteContents, setNoteContents] = useState(note.noteContents);
     const [error, setError] = useState('');
+    const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
     const hashNonce = async (nonce) => {
         const encoder = new TextEncoder();
@@ -39,7 +40,7 @@ export default function NoteCard({ note, fetchNotes }) {
         const rawNonce = localStorage.getItem('user_auth_nonce');
 
         try {
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/notes/${note._id}`, {
+            const res = await fetch(`${BACKEND_URL}/api/notes/${note._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -70,7 +71,7 @@ export default function NoteCard({ note, fetchNotes }) {
         const rawNonce = localStorage.getItem('user_auth_nonce');
 
         try {
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/notes/${note._id}`, {
+            const res = await fetch(`${BACKEND_URL}/api/notes/${note._id}`, {
                 method: 'DELETE',
                 headers: {
                     'x-auth-nonce': rawNonce

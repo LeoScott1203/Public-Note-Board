@@ -4,11 +4,11 @@ import NoteForm from './components/NoteForm';
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
   const fetchNotes = async () => {
     try {
-      console.log(process.env.REACT_APP_BACKEND_URL);
-      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/notes`);
+      const res = await fetch(`${BACKEND_URL}/api/notes`);
       const data = await res.json();
       setNotes(data);
     } catch (err) {
