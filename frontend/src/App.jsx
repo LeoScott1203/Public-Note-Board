@@ -10,8 +10,8 @@ function App() {
       const res = await fetch(`${process.env.BACKEND_URL}/api/notes`);
       const data = await res.json();
       setNotes(data);
-    } catch (error) {
-      console.error('Error fetching notes:', error);
+    } catch (err) {
+      console.error('Error fetching notes:', err.message);
     }
   };
 
