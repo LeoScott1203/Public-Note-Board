@@ -4,12 +4,12 @@ const cors = require('cors');
 const eventRouter = require('./routes/router');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
 
-const mongoURL = 'mongodb+srv://lpeckera_db_user:gMKd9gb0g45DbDn0@cluster0.ukpxnby.mongodb.net/?appName=Cluster0&retryWrites=true&w=majority';
+const mongoURL = process.env.mongoURL
 
 mongoose.connect(mongoURL)
     .then(() => { console.log('Connected to MongoDB') })
@@ -18,5 +18,5 @@ mongoose.connect(mongoURL)
 app.use('/api', eventRouter);
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on port ${port}`);
 });
