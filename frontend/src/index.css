@@ -1,0 +1,38 @@
+#NoteCard {
+  background: lightgrey;
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+}
+
+#NoteCard form label {
+  font-weight: bold;
+}
+
+#NoteForm form label {
+  font-weight: bold;
+}
+
+#NoteForm form > * {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#CardList > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#NoteForm form button {
+  font-weight: bold;
+}
+
+#NoteCard h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+}
