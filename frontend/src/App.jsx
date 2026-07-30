@@ -7,6 +7,7 @@ function App() {
 
   const fetchNotes = async () => {
     try {
+      console.log(process.env.REACT_APP_BACKEND_URL);
       const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/notes`);
       const data = await res.json();
       setNotes(data);
