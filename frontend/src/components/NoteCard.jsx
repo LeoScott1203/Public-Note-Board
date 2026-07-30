@@ -39,7 +39,7 @@ export default function NoteCard({ note, fetchNotes }) {
         const rawNonce = localStorage.getItem('user_auth_nonce');
 
         try {
-            const res = await fetch(`http://localhost:5000/api/notes/${note._id}`, {
+            const res = await fetch(`${process.env.BACKEND_URL}/api/notes/${note._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function NoteCard({ note, fetchNotes }) {
         const rawNonce = localStorage.getItem('user_auth_nonce');
 
         try {
-            const res = await fetch(`http://localhost:5000/api/notes/${note._id}`, {
+            const res = await fetch(`${process.env.BACKEND_URL}/api/notes/${note._id}`, {
                 method: 'DELETE',
                 headers: {
                     'x-auth-nonce': rawNonce
