@@ -56,7 +56,7 @@ export default function NoteForm({ refreshNotes }) {
 
     return (
         <div id='NoteForm'>
-            {error && <div>{error}</div>}
+            {error && <div id='Error'>{error}</div>}
 
             <form onSubmit={handleSubmit}>
                 <div>

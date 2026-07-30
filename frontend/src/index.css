@@ -36,3 +36,7 @@
 h1 {
   margin-bottom: 0;
 }
+
+#Error {
+  font-weight: bold;
+}
