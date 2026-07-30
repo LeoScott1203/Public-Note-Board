@@ -7,7 +7,7 @@ function App() {
 
   const fetchNotes = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/notes');
+      const res = await fetch(`${process.env.BACKEND_URL}/api/notes`);
       const data = await res.json();
       setNotes(data);
     } catch (error) {
