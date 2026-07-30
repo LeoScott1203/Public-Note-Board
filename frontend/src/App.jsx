@@ -7,6 +7,7 @@ function App() {
 
   const fetchNotes = async () => {
     try {
+      console.log(process.env.BACKEND_URL);
       const res = await fetch(`${process.env.BACKEND_URL}/api/notes`);
       const data = await res.json();
       setNotes(data);
