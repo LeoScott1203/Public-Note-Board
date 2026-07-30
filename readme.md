@@ -1,0 +1,1 @@
+Full-stack (MERN) web application where you post and edit public note cards.

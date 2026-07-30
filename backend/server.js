@@ -9,7 +9,7 @@ const port = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-const mongoURL = process.env.mongoURL
+const mongoURL = process.env.MONGO_URL
 
 mongoose.connect(mongoURL)
     .then(() => { console.log('Connected to MongoDB') })
@@ -18,5 +18,5 @@ mongoose.connect(mongoURL)
 app.use('/api', eventRouter);
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port cl${port}`);
 });
