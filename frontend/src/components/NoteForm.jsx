@@ -30,7 +30,7 @@ export default function NoteForm({ refreshNotes }) {
         const rawNonce = getNonce();
 
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/notes`, {
+            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/notes`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
