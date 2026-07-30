@@ -106,7 +106,7 @@ export default function NoteCard({ note, fetchNotes }) {
                     </div>
                     <div>
                         <button type="submit">Save</button>
-                        <button type="button" onClick={() => setIsEditing(false)}>Cancel</button>
+                        <button type="button" onClick={() => { setIsEditing(false); setError(''); }}>Cancel</button>
                     </div>
                 </form>
             ) : (

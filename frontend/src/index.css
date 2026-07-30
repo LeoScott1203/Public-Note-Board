@@ -40,3 +40,8 @@ h1 {
 #Error {
   font-weight: bold;
 }
+
+p {
+  overflow-wrap: break-word;
+  white-space: normal;
+}
